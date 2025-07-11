@@ -1,0 +1,1 @@
+from .recommendation.views import GenerateRecommendationView
