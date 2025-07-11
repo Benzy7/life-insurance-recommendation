@@ -1,0 +1,38 @@
+version: "3.8"
+
+services:
+  db:
+    image: postgres
+    container_name: skygem_db
+    restart: always
+    ports:
+      - "5442:5432"
+    environment:
+      POSTGRES_USER: changeme
+      POSTGRES_PASSWORD: changeme
+    volumes:
+      - pgdb-data:/var/lib/postgresql/data
+    networks:
+      - dev-network
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: skygem_pgadmin
+    restart: always
+    ports:
+      - "8888:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: changeme@mail.com
+      PGADMIN_DEFAULT_PASSWORD: changeme
+    volumes:
+      - pgadmin-data:/var/lib/pgadmin
+    networks:
+      - dev-network
+
+volumes:
+  pgdb-data:
+  pgadmin-data:
+
+networks:
+  dev-network:
+    driver: bridge
