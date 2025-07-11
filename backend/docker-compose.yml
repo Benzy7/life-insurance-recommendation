@@ -10,6 +10,7 @@ services:
     environment:
       POSTGRES_USER: changeme
       POSTGRES_PASSWORD: changeme
+      POSTGRES_DB: skygem_db
     volumes:
       - pgdb-data:/var/lib/postgresql/data
     networks:
