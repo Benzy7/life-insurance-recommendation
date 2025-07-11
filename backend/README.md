@@ -72,8 +72,8 @@ backend/
 
 ### 1. Clone the project
 ```bash
-git clone https://github.com/your-username/life-insurance-app.git
-cd life-insurance-app/backend
+git clone https://github.com/Benzy7/life-insurance-recommendation.git
+cd life-insurance-recommendation/backend
 ```
 
 ### 2.  Create virtual environment
